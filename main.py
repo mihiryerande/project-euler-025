@@ -30,7 +30,7 @@ from math import ceil, log10, sqrt
 PHI = (1 + sqrt(5)) / 2
 
 
-def main(d):
+def main(d: int) -> int:
     """
     Returns the index of the first term in the Fibonacci sequence to contain `d` digits,
         where F_1 = F_2 = 1,
@@ -40,7 +40,7 @@ def main(d):
         d (int): Natural number
 
     Returns:
-        Index of first Fibonacci number having `d` digits.
+        (int): Index of first Fibonacci number having `d` digits.
     """
     assert type(d) == int and d > 0
     global PHI
