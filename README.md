@@ -1,4 +1,6 @@
-# Project Euler - Problem 25 - 1000-digit Fibonacci Number
+# Project Euler
+
+## Problem 25 - 1000-digit Fibonacci Number
 The Fibonacci sequence is defined by the recurrence relation:
 
 $\qquad F_n = F_{n−1} + F_{n−2}$, where $F_1 = 1$ and $F_2 = 1$.
