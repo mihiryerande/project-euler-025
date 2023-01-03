@@ -49,14 +49,14 @@ def main(d: int) -> int:
     #     F_n >= 10 ** (d - 1)
     #     round(PHI ** n / sqrt(5)) >= 10 ** (d - 1)
     #     PHI ** n / sqrt(5) >= 10 ** (d - 1) - 0.5
-    #     PHI ** n >= sqrt(5) * 10 ** (d - 1) - 0.5
-    #     log(PHI ** n) >= log(sqrt(5) * 10 ** (d - 1) - 0.5)
-    #     n * log(PHI) >= log(sqrt(5) * 10 ** (d - 1) - 0.5)
-    #     n >= log(sqrt(5) * 10 ** (d - 1) - 0.5) / log(PHI)
-    #     n >= log(sqrt(5) * 10 ** (d - 1)) / log(PHI)
-    #     n >= [log(sqrt(5)) + log(10 ** (d - 1))] / log(PHI)
-    #     n >= [0.5 * log(5) + log(10 ** (d - 1))] / log(PHI)
-    #     n >= [0.5 * log10(5) + log10(10 ** (d - 1))] / log10(PHI)
+    #     PHI ** n >= sqrt(5) * (10 ** (d - 1) - 0.5)
+    #     log(PHI ** n) >= log(sqrt(5) * (10 ** (d - 1) - 0.5))
+    #     n * log(PHI) >= log(sqrt(5) * (10 ** (d - 1) - 0.5))
+    #     n * log(PHI) >= log(sqrt(5)) + log(10 ** (d - 1) - 0.5)
+    #     n * log(PHI) >= 0.5 * log(5) + log(10 ** (d - 1) - 0.5)
+    #     n >= [0.5 * log(5) + log(10 ** (d - 1) - 0.5)] / log(PHI)
+    #     n >= [0.5 * log(5) + log(10 ** (d - 1))] / log(PHI)           (approximating)
+    #     n >= [0.5 * log10(5) + log10(10 ** (d - 1))] / log10(PHI)     (Explicitly use log base-10)
     #     n >= [0.5 * log10(5) + (d-1)] / log10(PHI)
 
     return ceil((0.5 * log10(5) + (d - 1)) / log10(PHI))
